@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sendMail"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="278.846" Width="517">
+    <Grid Margin="0,0,12,0" Height="244" VerticalAlignment="Top">
+        <Label x:Name="Label" HorizontalAlignment="Left" Height="33" Margin="295,194,0,0" VerticalAlignment="Top" Width="182"/>
+        <Button x:Name="btn" Content="Send" HorizontalAlignment="Left" Margin="78,207,0,0" VerticalAlignment="Top" Width="75" Click="btn_Click"/>
+        <TextBox x:Name="mailTo" HorizontalAlignment="Left" Height="25" Margin="36,19,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" Width="441" GotFocus="mailTo_GotFocus"/>
+        <TextBox x:Name="Message" HorizontalAlignment="Left" Height="81" Margin="36,58,0,0" TextWrapping="Wrap" Text="Msg:" VerticalAlignment="Top" Width="441" GotFocus="Message_GotFocus"/>
+        <TextBox HorizontalAlignment="Left" x:Name="countMail" Margin="187,207,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="20" Width="62" GotFocus="countMail_GotFocus" RenderTransformOrigin="0.566,-1.304"/>
+
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="16" Margin="39,156,0,0" VerticalAlignment="Top" Width="440" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+
     </Grid>
 </Window>
